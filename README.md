@@ -3,12 +3,11 @@
 # data processing
 ## structure
 ```text
-project_root/
-  data/
-    train.csv          # Kaggle training data
-    test.csv           # Kaggle test data
-  notebooks/
-    eda_and_preprocess.ipynb   # EDA + baseline preprocessing (my notebook)
+data_process/
+  data/                # Kaggle原始数据集
+    train.csv          
+    test.csv           
+    sample_submission.csv
   processed/            # Baseline feature set (full original features)
     X_train_proc.npz
     X_valid_proc.npz
@@ -39,5 +38,8 @@ project_root/
     valid_ids_small.npy
     test_ids_small.npy
     preprocessor_small.joblib
+  data_process.py        # Script: build full original set
   make_features_fe.py    # Script: build feature-engineered set
   make_features_small.py # Script: build small core feature set
+  eda.ipynb              # eda处理，里面的结果可用于report
+  usage.ipynb            # 用clf = LogisticRegression(max_iter=1000)跑了一下三种数据集，结果在内，可作参考
