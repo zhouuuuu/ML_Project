@@ -1,0 +1,5 @@
+# Jupyter 临时文件
+models/.ipynb_checkpoints/
+
+# CatBoost 日志目录
+models/catboost_info/
